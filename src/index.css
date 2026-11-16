@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@custom-variant dark (@media (prefers-color-scheme: dark));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Lexend", var(--font-sans);
+
+  /* Brand ramp — OKLCH for perceptually-even steps */
+  --color-brand-50: oklch(97% 0.02 292);
+  --color-brand-100: oklch(93% 0.045 292);
+  --color-brand-200: oklch(86% 0.08 292);
+  --color-brand-300: oklch(76% 0.12 292);
+  --color-brand-400: oklch(66% 0.17 292);
+  --color-brand-500: oklch(58% 0.21 292);
+  --color-brand-600: oklch(50% 0.22 292);
+  --color-brand-700: oklch(42% 0.19 292);
+  --color-brand-800: oklch(33% 0.15 292);
+  --color-brand-900: oklch(24% 0.1 292);
+
+  --color-accent-400: oklch(78% 0.14 195);
+  --color-accent-500: oklch(68% 0.15 195);
+  --color-accent-600: oklch(58% 0.14 195);
+
+  --color-ink-50: oklch(98% 0.004 286);
+  --color-ink-100: oklch(94% 0.006 286);
+  --color-ink-300: oklch(76% 0.01 286);
+  --color-ink-500: oklch(55% 0.01 286);
+  --color-ink-700: oklch(32% 0.012 286);
+  --color-ink-800: oklch(22% 0.012 286);
+  --color-ink-900: oklch(14% 0.01 286);
+  --color-ink-950: oklch(9% 0.008 286);
+
+  --shadow-elev-1: 0 1px 2px oklch(0% 0 0 / 0.06);
+  --shadow-elev-2: 0 4px 10px -2px oklch(0% 0 0 / 0.08), 0 2px 4px -2px oklch(0% 0 0 / 0.06);
+  --shadow-elev-3: 0 14px 28px -8px oklch(0% 0 0 / 0.14), 0 6px 10px -6px oklch(0% 0 0 / 0.1);
+  --shadow-elev-4: 0 28px 48px -12px oklch(0% 0 0 / 0.22);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  background: light-dark(var(--color-ink-50), var(--color-ink-950));
+  color: light-dark(var(--color-ink-700), var(--color-ink-100));
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--color-brand-200);
+}
+
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background: var(--color-brand-700);
+  }
+}
+
+.glass {
+  background: light-dark(oklch(100% 0 0 / 0.65), oklch(20% 0.01 286 / 0.55));
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+}
+
+.prose-article {
+  max-width: 100%;
+}
+.prose-article > :first-child {
+  margin-top: 0;
+}
+.prose-article h2 {
+  font-family: var(--font-display);
+}
+.prose-article a {
+  color: var(--color-brand-600);
+  text-decoration-line: underline;
+  text-decoration-color: var(--color-brand-300);
+  text-underline-offset: 3px;
+}
+@media (prefers-color-scheme: dark) {
+  .prose-article a {
+    color: var(--color-brand-300);
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+}

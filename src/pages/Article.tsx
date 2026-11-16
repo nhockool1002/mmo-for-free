@@ -1,0 +1,96 @@
+import { For, Show, createMemo } from "solid-js";
+import { A, useNavigate, useParams } from "@solidjs/router";
+import { useI18n } from "../i18n/context";
+import { getArticleBySlugWithFallback, getRelatedArticles } from "../lib/content";
+import { accentChipBg, accentText } from "../lib/accent";
+import ArticleCard from "../components/ArticleCard";
+import NotFound from "./NotFound";
+
+export default function Article() {
+  const params = useParams<{ slug: string }>();
+  const navigate = useNavigate();
+  const { locale, t } = useI18n();
+
+  const result = createMemo(() => getArticleBySlugWithFallback(locale(), params.slug));
+
+  return (
+    <Show when={result()} fallback={<NotFound />} keyed>
+      {(res) => {
+        const article = res.article;
+        const related = getRelatedArticles(article);
+        return (
+          <article class="mx-auto max-w-3xl px-4 pb-20 sm:px-6">
+            <button
+              type="button"
+              onClick={() => navigate(`/${locale()}`)}
+              class="mt-6 inline-flex min-h-9 items-center gap-1 rounded-full px-1 text-sm font-medium text-ink-500 transition-colors duration-150 hover:text-brand-600 dark:text-ink-300 dark:hover:text-brand-300"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              {t("back_home")}
+            </button>
+
+            <Show when={res.isFallback}>
+              <p class="mt-4 rounded-xl bg-amber-100 px-4 py-2 text-sm text-amber-800 dark:bg-amber-900/30 dark:text-amber-200">
+                {t("article_unavailable_in_lang")}
+              </p>
+            </Show>
+
+            <header class="mt-4">
+              <div class="flex flex-wrap gap-1.5">
+                <For each={article.tags}>
+                  {(tag) => (
+                    <span
+                      class={`rounded-full px-2 py-0.5 text-xs font-medium ${accentChipBg[article.accent ?? "violet"]} ${accentText[article.accent ?? "violet"]}`}
+                    >
+                      {tag}
+                    </span>
+                  )}
+                </For>
+              </div>
+              <h1
+                class="mt-3 font-display font-bold text-ink-900 dark:text-white"
+                style={{ "font-size": "clamp(1.75rem, 1.3rem + 1.8vw, 2.6rem)", "line-height": "1.15" }}
+              >
+                {article.title}
+              </h1>
+              <p class="mt-3 flex flex-wrap items-center gap-2 text-sm text-ink-500 dark:text-ink-400">
+                <span>
+                  {t("published_on")} {article.date}
+                </span>
+                <span aria-hidden="true">·</span>
+                <span>{t("reading_time", { n: article.readingMinutes })}</span>
+              </p>
+            </header>
+
+            <div
+              class="prose-article mt-8 max-w-none text-[1.05rem] leading-7 text-ink-700 dark:text-ink-200 [&_h2]:mt-9 [&_h2]:mb-3 [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-ink-900 [&_h2]:dark:text-white [&_h3]:mt-6 [&_h3]:mb-2 [&_h3]:text-lg [&_h3]:font-semibold [&_p]:my-4 [&_ul]:my-4 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:my-4 [&_ol]:list-decimal [&_ol]:pl-6 [&_li]:my-1 [&_blockquote]:my-5 [&_blockquote]:border-l-4 [&_blockquote]:border-brand-300 [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-ink-500 [&_strong]:font-semibold [&_strong]:text-ink-900 [&_strong]:dark:text-white"
+              innerHTML={article.html}
+            />
+
+            <Show when={related.length > 0}>
+              <section class="mt-14">
+                <h2 class="font-display text-lg font-semibold text-ink-900 dark:text-white">
+                  {t("related_title")}
+                </h2>
+                <div class="mt-4 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                  <For each={related}>{(a) => <ArticleCard article={a} />}</For>
+                </div>
+              </section>
+            </Show>
+
+            <div class="mt-10">
+              <A
+                href={`/${locale()}`}
+                class="inline-flex min-h-11 items-center rounded-full bg-brand-600 px-5 text-sm font-semibold text-white shadow-elev-2 transition-transform duration-150 hover:-translate-y-0.5 hover:bg-brand-700"
+              >
+                {t("back_home")}
+              </A>
+            </div>
+          </article>
+        );
+      }}
+    </Show>
+  );
+}
