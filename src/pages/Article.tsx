@@ -2,8 +2,9 @@ import { For, Show, createMemo } from "solid-js";
 import { A, useNavigate, useParams } from "@solidjs/router";
 import { useI18n } from "../i18n/context";
 import { getArticleBySlugWithFallback, getRelatedArticles } from "../lib/content";
-import { accentChipBg, accentText } from "../lib/accent";
+import { accentChipBg, accentGradient, accentText } from "../lib/accent";
 import ArticleCard from "../components/ArticleCard";
+import CoverIllustration from "../components/CoverIllustration";
 import NotFound from "./NotFound";
 
 export default function Article() {
@@ -36,6 +37,22 @@ export default function Article() {
                 {t("article_unavailable_in_lang")}
               </p>
             </Show>
+
+            <div
+              class={`relative mt-4 flex h-44 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br shadow-elev-2 sm:h-56 ${accentGradient[article.accent ?? "violet"]}`}
+            >
+              <div class="absolute inset-0 opacity-15 mix-blend-overlay" aria-hidden="true">
+                <svg width="100%" height="100%">
+                  <defs>
+                    <pattern id={`hero-dots-${article.id}`} width="16" height="16" patternUnits="userSpaceOnUse">
+                      <circle cx="2" cy="2" r="1.5" fill="white" />
+                    </pattern>
+                  </defs>
+                  <rect width="100%" height="100%" fill={`url(#hero-dots-${article.id})`} />
+                </svg>
+              </div>
+              <CoverIllustration cover={article.cover ?? "network"} class="h-28 w-28 opacity-95 sm:h-36 sm:w-36" />
+            </div>
 
             <header class="mt-4">
               <div class="flex flex-wrap gap-1.5">

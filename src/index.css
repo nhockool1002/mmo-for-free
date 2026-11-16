@@ -24,8 +24,11 @@
 
   --color-ink-50: oklch(98% 0.004 286);
   --color-ink-100: oklch(94% 0.006 286);
+  --color-ink-200: oklch(85% 0.008 286);
   --color-ink-300: oklch(76% 0.01 286);
+  --color-ink-400: oklch(65% 0.01 286);
   --color-ink-500: oklch(55% 0.01 286);
+  --color-ink-600: oklch(43% 0.011 286);
   --color-ink-700: oklch(32% 0.012 286);
   --color-ink-800: oklch(22% 0.012 286);
   --color-ink-900: oklch(14% 0.01 286);

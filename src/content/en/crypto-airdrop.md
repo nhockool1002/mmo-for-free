@@ -6,7 +6,8 @@
   "excerpt": "How airdrops actually work, wallet/security risks, and how to tell a real airdrop from a scam.",
   "date": "2025-12-20",
   "tags": ["crypto", "airdrop", "risk"],
-  "accent": "violet"
+  "accent": "violet",
+  "cover": "crypto"
 }
 ---
 ## What is an airdrop?

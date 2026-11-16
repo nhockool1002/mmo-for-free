@@ -6,7 +6,8 @@
   "excerpt": "How Honeygain actually works, realistic earnings, running multiple devices, the minimum payout, and how to withdraw — a detailed step-by-step guide.",
   "date": "2026-11-16",
   "tags": ["passive-income", "honeygain", "bandwidth-sharing", "beginner"],
-  "accent": "cyan"
+  "accent": "cyan",
+  "cover": "network"
 }
 ---
 ## What is Honeygain?

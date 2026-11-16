@@ -6,7 +6,8 @@
   "excerpt": "Realistic income sources from short/long-form video platforms, and a sensible timeline to expect results.",
   "date": "2026-01-28",
   "tags": ["content", "youtube", "tiktok"],
-  "accent": "rose"
+  "accent": "rose",
+  "cover": "content"
 }
 ---
 ## Main income sources

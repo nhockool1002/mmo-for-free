@@ -6,7 +6,8 @@
   "excerpt": "What affiliate marketing actually is, how it works, and the common mistakes that make beginners quit early.",
   "date": "2026-02-18",
   "tags": ["affiliate", "beginner", "passive-income"],
-  "accent": "violet"
+  "accent": "violet",
+  "cover": "affiliate"
 }
 ---
 ## What is affiliate marketing?

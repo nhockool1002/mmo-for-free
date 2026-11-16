@@ -6,7 +6,8 @@
   "excerpt": "Honeygain hoạt động ra sao, mức thu nhập thực tế, cách chạy nhiều thiết bị, mức rút tối thiểu và cách rút tiền — kèm hướng dẫn chi tiết từng bước.",
   "date": "2026-11-16",
   "tags": ["passive-income", "honeygain", "bandwidth-sharing", "beginner"],
-  "accent": "cyan"
+  "accent": "cyan",
+  "cover": "network"
 }
 ---
 ## Honeygain là gì?

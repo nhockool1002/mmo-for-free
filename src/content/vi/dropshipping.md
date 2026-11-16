@@ -6,7 +6,8 @@
   "excerpt": "Mô hình dropshipping, chi phí thực tế thường bị bỏ qua, và vì sao đa số shop mới đóng cửa trong 3 tháng.",
   "date": "2026-01-05",
   "tags": ["dropshipping", "ecommerce"],
-  "accent": "emerald"
+  "accent": "emerald",
+  "cover": "ecommerce"
 }
 ---
 ## Mô hình dropshipping

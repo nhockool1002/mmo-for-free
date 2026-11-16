@@ -6,7 +6,8 @@
   "excerpt": "Affiliate marketing là gì, hoạt động ra sao, và những sai lầm phổ biến khiến người mới bỏ cuộc sớm.",
   "date": "2026-02-18",
   "tags": ["affiliate", "beginner", "passive-income"],
-  "accent": "violet"
+  "accent": "violet",
+  "cover": "affiliate"
 }
 ---
 ## Affiliate marketing là gì?

@@ -6,7 +6,8 @@
   "excerpt": "Airdrop hoạt động thế nào, rủi ro ví & bảo mật, và cách phân biệt airdrop thật với lừa đảo.",
   "date": "2025-12-20",
   "tags": ["crypto", "airdrop", "risk"],
-  "accent": "violet"
+  "accent": "violet",
+  "cover": "crypto"
 }
 ---
 ## Airdrop là gì?

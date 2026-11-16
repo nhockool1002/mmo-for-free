@@ -6,7 +6,8 @@
   "excerpt": "Picking a skill, building a portfolio, and landing your first job on international and local freelance platforms.",
   "date": "2026-02-10",
   "tags": ["freelance", "beginner", "skill"],
-  "accent": "cyan"
+  "accent": "cyan",
+  "cover": "freelance"
 }
 ---
 ## Who is freelancing a good fit for?

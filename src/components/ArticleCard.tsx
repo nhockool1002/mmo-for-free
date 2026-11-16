@@ -2,6 +2,7 @@ import { A } from "@solidjs/router";
 import type { Article } from "../lib/content";
 import { accentGradient, accentChipBg, accentText } from "../lib/accent";
 import { useI18n } from "../i18n/context";
+import CoverIllustration from "./CoverIllustration";
 
 export default function ArticleCard(props: { article: Article; index?: number }) {
   const { locale, t } = useI18n();
@@ -13,9 +14,9 @@ export default function ArticleCard(props: { article: Article; index?: number })
       style={{ "transition-property": "transform, box-shadow" }}
     >
       <div
-        class={`relative flex h-28 items-end bg-gradient-to-br p-4 ${accentGradient[props.article.accent ?? "violet"]}`}
+        class={`relative flex h-36 items-end justify-between overflow-hidden bg-gradient-to-br p-4 ${accentGradient[props.article.accent ?? "violet"]}`}
       >
-        <div class="absolute inset-0 opacity-20 mix-blend-overlay" aria-hidden="true">
+        <div class="absolute inset-0 opacity-15 mix-blend-overlay" aria-hidden="true">
           <svg width="100%" height="100%">
             <defs>
               <pattern id={`dots-${props.article.id}`} width="14" height="14" patternUnits="userSpaceOnUse">
@@ -25,6 +26,10 @@ export default function ArticleCard(props: { article: Article; index?: number })
             <rect width="100%" height="100%" fill={`url(#dots-${props.article.id})`} />
           </svg>
         </div>
+        <CoverIllustration
+          cover={props.article.cover ?? "network"}
+          class="absolute right-3 top-3 h-20 w-20 opacity-90 transition-transform duration-250 ease-out group-hover:scale-105 sm:h-24 sm:w-24"
+        />
         <span class="relative rounded-full bg-black/20 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-sm">
           {t("reading_time", { n: props.article.readingMinutes })}
         </span>

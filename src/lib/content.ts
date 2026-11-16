@@ -1,5 +1,6 @@
 import { marked } from "marked";
 import type { Locale } from "../i18n/translations";
+import type { CoverKey } from "../components/CoverIllustration";
 
 export interface ArticleFrontMatter {
   id: string;
@@ -9,6 +10,7 @@ export interface ArticleFrontMatter {
   date: string;
   tags: string[];
   accent?: AccentKey;
+  cover?: CoverKey;
 }
 
 export type AccentKey = "violet" | "cyan" | "amber" | "rose" | "emerald";
@@ -60,6 +62,7 @@ function buildArticles(): Article[] {
       date: meta.date ?? "2026-01-01",
       tags: meta.tags ?? [],
       accent: meta.accent ?? "violet",
+      cover: meta.cover ?? "network",
       locale,
       html: marked.parse(body, { async: false }) as string,
       readingMinutes: wordCountToMinutes(body),

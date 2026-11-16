@@ -6,7 +6,8 @@
   "excerpt": "A realistic look at earnings, time investment, and how to spot a trustworthy platform.",
   "date": "2026-01-15",
   "tags": ["survey", "microtask", "side-income"],
-  "accent": "amber"
+  "accent": "amber",
+  "cover": "survey"
 }
 ---
 ## What are microtasks?

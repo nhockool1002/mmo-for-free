@@ -6,7 +6,8 @@
   "excerpt": "Các nguồn thu nhập thực tế từ nền tảng video ngắn/dài, và thời gian hợp lý để kỳ vọng có kết quả.",
   "date": "2026-01-28",
   "tags": ["content", "youtube", "tiktok"],
-  "accent": "rose"
+  "accent": "rose",
+  "cover": "content"
 }
 ---
 ## Các nguồn thu nhập chính

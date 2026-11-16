@@ -6,7 +6,8 @@
   "excerpt": "The dropshipping model, the real costs people overlook, and why most new stores close within 3 months.",
   "date": "2026-01-05",
   "tags": ["dropshipping", "ecommerce"],
-  "accent": "emerald"
+  "accent": "emerald",
+  "cover": "ecommerce"
 }
 ---
 ## The dropshipping model

@@ -6,7 +6,8 @@
   "excerpt": "Chọn kỹ năng, xây hồ sơ, và nhận job đầu tiên trên các nền tảng freelance quốc tế & trong nước.",
   "date": "2026-02-10",
   "tags": ["freelance", "beginner", "skill"],
-  "accent": "cyan"
+  "accent": "cyan",
+  "cover": "freelance"
 }
 ---
 ## Freelance phù hợp với ai?

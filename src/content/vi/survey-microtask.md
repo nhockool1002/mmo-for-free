@@ -6,7 +6,8 @@
   "excerpt": "Đánh giá thực tế về mức thu nhập, thời gian bỏ ra, và cách nhận diện nền tảng uy tín.",
   "date": "2026-01-15",
   "tags": ["survey", "microtask", "side-income"],
-  "accent": "amber"
+  "accent": "amber",
+  "cover": "survey"
 }
 ---
 ## Microtask là gì?
