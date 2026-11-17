@@ -17,7 +17,7 @@ export const dict = {
     nav_github: "GitHub",
     hero_title: "Kiếm tiền online, bắt đầu từ kiến thức đúng.",
     hero_subtitle:
-      "Tổng hợp kinh nghiệm thực tế về MMO (Make Money Online), bắt đầu với thu nhập thụ động từ chia sẻ băng thông. Không bán khoá học, không mời đầu tư, chỉ chia sẻ miễn phí.",
+      "Tổng hợp kinh nghiệm thực tế về kiếm tiền online và kiếm tiền thụ động, bắt đầu với chia sẻ băng thông — phù hợp cho người đang thất nghiệp, mới bị sa thải, kể cả dân IT thất nghiệp muốn có thêm thu nhập trong lúc tìm việc. Không bán khoá học, không mời đầu tư, chỉ chia sẻ miễn phí.",
     search_placeholder: "Tìm bài viết theo tên, chủ đề...",
     filter_all: "Tất cả",
     read_more: "Đọc tiếp",
@@ -36,6 +36,9 @@ export const dict = {
     toggle_theme: "Chuyển giao diện sáng/tối",
     article_unavailable_in_lang: "Bài viết này chưa có bản dịch, đang xem bản gốc.",
     article_count: "{n} bài viết",
+    seo_home_title: "MMO For Free — Kiếm tiền online, kiếm tiền thụ động miễn phí",
+    seo_home_description:
+      "Hướng dẫn kiếm tiền online, kiếm tiền thụ động miễn phí, minh bạch — phù hợp cho người đang thất nghiệp, mới bị sa thải, kể cả dân IT thất nghiệp tìm việc làm khi thất nghiệp.",
   },
   en: {
     siteName: "MMO For Free",
@@ -44,7 +47,7 @@ export const dict = {
     nav_github: "GitHub",
     hero_title: "Make money online, starting with the right knowledge.",
     hero_subtitle:
-      "Practical write-ups on MMO (Make Money Online), starting with passive income from sharing spare bandwidth. No paid courses, no investment pitches — just free knowledge.",
+      "Practical write-ups on making money online and passive income, starting with sharing spare bandwidth — useful if you're unemployed, recently laid off, or an out-of-work IT professional looking for extra income while job hunting. No paid courses, no investment pitches — just free knowledge.",
     search_placeholder: "Search articles by title, topic...",
     filter_all: "All",
     read_more: "Read more",
@@ -63,6 +66,9 @@ export const dict = {
     toggle_theme: "Toggle light/dark theme",
     article_unavailable_in_lang: "No translation yet — showing the original.",
     article_count: "{n} articles",
+    seo_home_title: "MMO For Free — Make Money Online, Free Passive Income Guides",
+    seo_home_description:
+      "Free, transparent make-money-online and passive-income guides — useful if you're unemployed, recently laid off, or an out-of-work IT professional looking for extra income.",
   },
 } as const;
 

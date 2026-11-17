@@ -1,4 +1,4 @@
-import { For, Show, createMemo } from "solid-js";
+import { For, Show, createMemo, createEffect } from "solid-js";
 import { A, useNavigate, useParams } from "@solidjs/router";
 import { useI18n } from "../i18n/context";
 import { getArticleBySlugWithFallback, getRelatedArticles } from "../lib/content";
@@ -6,6 +6,7 @@ import { accentChipBg, accentGradient, accentText } from "../lib/accent";
 import ArticleCard from "../components/ArticleCard";
 import CoverIllustration from "../components/CoverIllustration";
 import NotFound from "./NotFound";
+import { setSeo, SITE_URL } from "../lib/seo";
 
 export default function Article() {
   const params = useParams<{ slug: string }>();
@@ -19,6 +20,30 @@ export default function Article() {
       {(res) => {
         const article = res.article;
         const related = getRelatedArticles(article);
+
+        createEffect(() => {
+          const path = `/${locale()}/bai-viet/${article.slug}`;
+          setSeo({
+            title: `${article.title} — MMO For Free`,
+            description: article.excerpt,
+            keywords: [...(article.keywords ?? []), ...article.tags],
+            path,
+            locale: locale(),
+            type: "article",
+            jsonLd: {
+              "@context": "https://schema.org",
+              "@type": "Article",
+              headline: article.title,
+              description: article.excerpt,
+              datePublished: article.date,
+              inLanguage: locale(),
+              url: `${SITE_URL}${path}`,
+              keywords: [...(article.keywords ?? []), ...article.tags].join(", "),
+              author: { "@type": "Organization", name: "MMO For Free" },
+            },
+          });
+        });
+
         return (
           <article class="mx-auto max-w-3xl px-4 pb-20 sm:px-6">
             <button

@@ -13,6 +13,8 @@ export interface ArticleFrontMatter {
   cover?: CoverKey;
   /** Optional real screenshot/photo path (from /public) used instead of the generated cover icon. */
   thumbnail?: string;
+  /** Extra SEO keywords beyond `tags`, for the meta keywords tag. */
+  keywords?: string[];
 }
 
 export type AccentKey = "violet" | "cyan" | "amber" | "rose" | "emerald";
@@ -66,6 +68,7 @@ function buildArticles(): Article[] {
       accent: meta.accent ?? "violet",
       cover: meta.cover ?? "network",
       thumbnail: meta.thumbnail,
+      keywords: meta.keywords,
       locale,
       html: marked.parse(body, { async: false }) as string,
       readingMinutes: wordCountToMinutes(body),

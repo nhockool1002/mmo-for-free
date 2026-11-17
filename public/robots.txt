@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://mmo-for-free.vercel.app/sitemap.xml

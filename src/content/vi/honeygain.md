@@ -3,12 +3,13 @@
   "id": "honeygain-passive-income",
   "slug": "kiem-tien-voi-honeygain-chia-se-bang-thong",
   "title": "Kiếm tiền thụ động với Honeygain: chia sẻ băng thông dư thừa",
-  "excerpt": "Honeygain hoạt động ra sao, mức thu nhập thực tế, cách chạy nhiều thiết bị, mức rút tối thiểu và cách rút tiền — kèm hướng dẫn chi tiết từng bước.",
+  "excerpt": "Honeygain hoạt động ra sao, mức thu nhập thực tế, cách chạy nhiều thiết bị, mức rút tối thiểu và cách rút tiền — một cách kiếm tiền online, kiếm tiền thụ động đơn giản, phù hợp làm thêm khi đang thất nghiệp hoặc vừa bị sa thải, kể cả dân IT thất nghiệp đang tìm việc mới.",
   "date": "2026-11-16",
   "tags": ["passive-income", "honeygain", "bandwidth-sharing", "beginner"],
   "accent": "cyan",
   "cover": "network",
-  "thumbnail": "/images/honeygain/thumbnail.webp"
+  "thumbnail": "/images/honeygain/thumbnail.webp",
+  "keywords": ["kiếm tiền online", "kiếm tiền thụ động", "việc làm khi thất nghiệp", "IT thất nghiệp", "sa thải", "thu nhập thụ động", "honeygain"]
 }
 ---
 ## Honeygain là gì?
@@ -16,6 +17,8 @@
 Honeygain là ứng dụng cho phép bạn **chia sẻ phần băng thông internet (bandwidth) nhàn rỗi** của thiết bị (máy tính, điện thoại) để đổi lấy "credits", sau đó quy đổi credits ra tiền thật. Honeygain bán lại lưu lượng mạng này cho các bên cần thu thập dữ liệu web công khai, nghiên cứu thị trường... Bạn không cần làm gì thêm ngoài việc cài app và để nó chạy nền.
 
 Đây là hình thức **thu nhập thụ động rất nhỏ**, phù hợp để "cắm thêm" trên các thiết bị đang nhàn rỗi sẵn có, **không phải nguồn thu nhập chính**.
+
+Honeygain cũng là một ví dụ dễ bắt đầu cho ai đang tìm **việc làm khi thất nghiệp** hoặc vừa trải qua **sa thải** — kể cả dân **IT thất nghiệp** vốn quen máy tính, nhiều thiết bị rảnh. Nó không thay thế được một công việc, nhưng là cách **kiếm tiền online** gần như không tốn công sức để có thêm một khoản nhỏ trong lúc tìm việc mới.
 
 ## Cơ chế hoạt động & quy đổi credits
 
@@ -128,6 +131,13 @@ Honeygain cũng có hệ thống **Achievements** (thành tựu) — hoàn thàn
 <figure>
   <img src="/images/honeygain/achievements.webp" width="2000" height="828" loading="lazy" alt="Trang Achievements của Honeygain với các huy hiệu Rookie, Busy Bee, JumpTasker, Buzz Booster" />
   <figcaption>Trang Achievements — các huy hiệu và thử thách nhỏ giúp kiếm thêm credit.</figcaption>
+</figure>
+
+Ngoài achievements, Honeygain còn có **"Lucky Pot"** — một lượt quay thưởng miễn phí mỗi khoảng 20+ giờ, cho ngẫu nhiên vài credit (ví dụ 20 credits trong ảnh dưới). Không cần làm gì để mở khoá, chỉ cần mở app/dashboard và bấm nhận khi hũ mật ong đã sẵn sàng.
+
+<figure>
+  <img src="/images/honeygain/lucky-pot.webp" width="2000" height="1421" loading="lazy" alt="Popup Lucky Pot của Honeygain thông báo nhận được 20 credits miễn phí" />
+  <figcaption>Lucky Pot — phần thưởng ngẫu nhiên miễn phí, nhận lại được sau mỗi ~20 giờ.</figcaption>
 </figure>
 
 ## Chương trình giới thiệu (referral)

@@ -3,12 +3,13 @@
   "id": "honeygain-passive-income",
   "slug": "earn-money-with-honeygain-share-bandwidth",
   "title": "Passive Income With Honeygain: Sharing Spare Bandwidth",
-  "excerpt": "How Honeygain actually works, realistic earnings, running multiple devices, the minimum payout, and how to withdraw — a detailed step-by-step guide.",
+  "excerpt": "How Honeygain actually works, realistic earnings, running multiple devices, the minimum payout, and how to withdraw — a simple way to make money online as passive income, useful for the recently unemployed or laid off (including laid-off IT workers) who want extra income while job hunting.",
   "date": "2026-11-16",
   "tags": ["passive-income", "honeygain", "bandwidth-sharing", "beginner"],
   "accent": "cyan",
   "cover": "network",
-  "thumbnail": "/images/honeygain/thumbnail.webp"
+  "thumbnail": "/images/honeygain/thumbnail.webp",
+  "keywords": ["make money online", "passive income", "jobs after layoffs", "unemployed IT workers", "tech layoffs", "honeygain"]
 }
 ---
 ## What is Honeygain?
@@ -16,6 +17,8 @@
 Honeygain is an app that lets you **share your device's unused internet bandwidth** (computer, phone) in exchange for "credits," which you can later cash out. Honeygain resells that network capacity to companies that need it for public web data collection, market research, and similar uses. You don't do anything beyond installing the app and letting it run in the background.
 
 This is a **very small passive-income stream**, best used as a side add-on for devices that are already sitting idle — **not a primary income source**.
+
+Honeygain is also an easy starting point if you're looking for **jobs after layoffs** or recently went through **tech layoffs** — including **unemployed IT workers** who already have spare devices lying around. It won't replace a job, but it's a near-effortless way to **make money online** for a little extra while you job hunt.
 
 ## How it works & the credit system
 
@@ -128,6 +131,13 @@ Honeygain also has an **Achievements** system — hitting small milestones (invi
 <figure>
   <img src="/images/honeygain/achievements.webp" width="2000" height="828" loading="lazy" alt="Honeygain's Achievements page with Rookie, Busy Bee, JumpTasker, and Buzz Booster badges" />
   <figcaption>The Achievements page — small badges and challenges that add a bit of extra credit.</figcaption>
+</figure>
+
+Besides achievements, Honeygain also has a **"Lucky Pot"** — a free spin available roughly every 20+ hours that pays out a small random credit amount (20 credits in the screenshot below). Nothing to unlock: just open the app/dashboard and claim it once the pot is ready.
+
+<figure>
+  <img src="/images/honeygain/lucky-pot.webp" width="2000" height="1421" loading="lazy" alt="Honeygain's Lucky Pot popup announcing a free 20-credit reward" />
+  <figcaption>Lucky Pot — a free random bonus, available again roughly every ~20 hours.</figcaption>
 </figure>
 
 ## The referral program

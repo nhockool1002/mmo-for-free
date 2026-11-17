@@ -1,7 +1,8 @@
-import { For, Show, createMemo, createSignal } from "solid-js";
+import { For, Show, createMemo, createSignal, createEffect } from "solid-js";
 import { useI18n } from "../i18n/context";
 import { getArticles, getAllTags } from "../lib/content";
 import ArticleCard from "../components/ArticleCard";
+import { setSeo } from "../lib/seo";
 
 export default function Home() {
   const { locale, t } = useI18n();
@@ -10,6 +11,20 @@ export default function Home() {
 
   const articles = createMemo(() => getArticles(locale()));
   const tags = createMemo(() => getAllTags(locale()));
+
+  createEffect(() => {
+    setSeo({
+      title: t("seo_home_title"),
+      description: t("seo_home_description"),
+      keywords:
+        locale() === "vi"
+          ? ["kiếm tiền online", "kiếm tiền thụ động", "việc làm khi thất nghiệp", "IT thất nghiệp", "sa thải"]
+          : ["make money online", "passive income", "jobs after layoffs", "unemployed IT workers", "tech layoffs"],
+      path: `/${locale()}`,
+      locale: locale(),
+      type: "website",
+    });
+  });
 
   const filtered = createMemo(() => {
     const q = query().trim().toLowerCase();

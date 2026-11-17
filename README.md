@@ -65,6 +65,7 @@ src/
 2. Trên Vercel: **New Project** → import repo này.
 3. Framework Preset: **Vite**. Build command: `npm run build`. Output: `dist` (đã cấu hình sẵn trong `vercel.json`, bao gồm rewrite SPA về `index.html` để các URL như `/vi/bai-viet/...` không bị 404 khi truy cập trực tiếp).
 4. Không cần biến môi trường — site hoàn toàn tĩnh, không gọi API nào.
+5. **Sau khi có domain thật** (Vercel tự cấp hoặc domain riêng), cập nhật `SITE_URL` trong [`src/lib/seo.ts`](src/lib/seo.ts), các URL tuyệt đối trong [`public/sitemap.xml`](public/sitemap.xml) và [`public/robots.txt`](public/robots.txt) — hiện đang để tạm `https://mmo-for-free.vercel.app`.
 
 ## Ghi chú thiết kế
 
