@@ -32,6 +32,20 @@ According to Honeygain's own payout page:
   <figcaption>The author's real Honeygain dashboard — current balance and daily earnings chart.</figcaption>
 </figure>
 
+## How Honeygain actually works, technically
+
+Honeygain isn't just "selling your spare bandwidth" — understanding the real mechanism matters for assessing the risk:
+
+- **Honeygain describes itself as a crowdsourced "residential proxy network."** In plain terms: the app turns your device into an **exit node** — Honeygain's business partners route their own web requests **through your home IP address**, which is the reverse of how a normal VPN works (there, you route your traffic through someone else's server).
+- **Why residential IPs are valuable:** companies that need to collect public web data at scale (checking regional ad placement, price comparison, market research) often get blocked when using datacenter IPs, since websites can flag those easily. A home IP like yours looks "natural" and is much harder to block.
+- **Honeygain doesn't sell directly to end clients** — by its own description, it supplies IPs to trusted proxy partners, who then lease them out to businesses or researchers. That means **you cannot know exactly who is using your IP** or which sites they're accessing through it — a detail Honeygain doesn't disclose publicly.
+- **Traffic is encrypted in transit**, and Honeygain states you're only paid for *shared traffic volume*, never for your personal data. That said, this can't be independently verified — it's a one-sided claim from the company itself.
+- **Security researchers have flagged real technical risk here**: Trend Micro's research on "proxyware" apps (Honeygain included, alongside similar apps) found that some paying customers of these resold proxy networks may misuse them — including for fraud or other illegal activity — entirely outside the device owner's (your) knowledge or control.
+
+> This is exactly why this article keeps telling you to check your workplace/school network policy before running Honeygain: technically, you're letting a third party use your IP to access the internet — not just "sharing idle bandwidth" in the casual sense most people assume.
+
+*Sources: Honeygain's own technical explainer and blog posts about its residential proxy model; Trend Micro's security research on the risks of proxyware apps.*
+
 ## Illustrative earnings chart by device count
 
 <svg viewBox="0 0 640 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustrative Honeygain monthly earnings estimate by number of devices">
@@ -74,8 +88,8 @@ The key mechanic: Honeygain rewards **traffic volume plus IP/network diversity**
 Important: Honeygain supports Windows, macOS, Linux (including via Docker) and Android. **There is no official iOS app** as of this writing. Before running it on a work or school network, check that network's usage policy — some organizations prohibit this kind of bandwidth-sharing software.
 
 <figure>
-  <img src="/images/honeygain/extension-popup.png" width="916" height="1196" loading="lazy" alt="Honeygain browser extension popup showing balance and today's shared data (email blurred)" />
-  <figcaption>The Honeygain browser extension — a quick way to check daily credits per device (email blurred for privacy).</figcaption>
+  <img src="/images/honeygain/extension-popup.png" width="916" height="1196" loading="lazy" alt="Honeygain's native macOS app, menu bar popup showing balance and today's shared data (email blurred)" />
+  <figcaption>Honeygain installed as a native macOS app (not a browser extension) — its menu bar popup is a quick way to check daily credits per device (email blurred for privacy).</figcaption>
 </figure>
 
 ## Minimum payout & how to withdraw
@@ -89,7 +103,7 @@ Honeygain currently offers two payout paths:
 
 **Steps to withdraw via PayPal (the most common path):**
 
-1. Open the Honeygain app/extension → go to **Payout**.
+1. Open the Honeygain app → go to **Payout**.
 2. Link your PayPal account (your PayPal email).
 3. Once your balance reaches the 20,000-credit minimum, tap **Request Payout**.
 4. Wait for Honeygain to process it (typically a few business days) — the money lands in your PayPal wallet.

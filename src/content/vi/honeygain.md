@@ -32,6 +32,20 @@ Theo trang thanh toán chính thức của Honeygain:
   <figcaption>Dashboard Honeygain thực tế của tác giả — số dư hiện tại và biểu đồ thu nhập theo ngày.</figcaption>
 </figure>
 
+## Honeygain hoạt động về mặt kỹ thuật như thế nào?
+
+Honeygain không chỉ đơn giản là "bán băng thông thừa" — để hiểu đúng rủi ro và cách nó kiếm tiền, cần biết cơ chế kỹ thuật phía sau:
+
+- **Honeygain tự mô tả mình là một "residential proxy network"** (mạng proxy dân dụng) được gây dựng từ cộng đồng người dùng (crowdsourced). Nói cách khác: ứng dụng biến thiết bị của bạn thành một **nút trung chuyển (exit node)** — các đối tác doanh nghiệp của Honeygain định tuyến yêu cầu truy cập web của họ **đi qua địa chỉ IP nhà bạn**, thay vì bạn truy cập internet qua proxy của người khác (ngược hướng so với VPN thông thường).
+- **Vì sao IP dân dụng (residential IP) có giá trị?** Các công ty cần thu thập dữ liệu web công khai ở quy mô lớn (kiểm tra quảng cáo hiển thị đúng vùng, so sánh giá, nghiên cứu thị trường) thường bị chặn nếu dùng IP trung tâm dữ liệu (datacenter IP) vì các trang web dễ nhận diện IP dạng đó. IP nhà riêng như của bạn trông "tự nhiên" hơn, khó bị chặn hơn.
+- **Honeygain không trực tiếp bán cho khách cuối** — theo mô tả của chính Honeygain, họ cấp IP cho các đối tác proxy đáng tin cậy, các đối tác này mới cho doanh nghiệp/nhà nghiên cứu thuê lại. Nghĩa là **bạn không thể biết chính xác ai đang dùng IP của mình** để truy cập trang nào — đây là điểm mà Honeygain không công khai chi tiết.
+- **Dữ liệu được mã hoá khi truyền**, và theo Honeygain, bạn chỉ được trả tiền cho *lưu lượng chia sẻ*, không phải cho dữ liệu cá nhân của bạn. Tuy nhiên vì không thể kiểm chứng độc lập, đây vẫn là lời khẳng định một phía từ chính công ty.
+- **Rủi ro kỹ thuật đã được giới nghiên cứu bảo mật ghi nhận**: báo cáo của Trend Micro về nhóm ứng dụng "proxyware" (gồm Honeygain và các app tương tự) chỉ ra rằng một số khách hàng thuê lại các mạng proxy này có thể dùng sai mục đích — kể cả cho hành vi gian lận hoặc bất hợp pháp — mà chủ thiết bị (tức bạn) hoàn toàn không biết và không kiểm soát được việc đó.
+
+> Đây là lý do vì sao bài viết liên tục nhắc bạn kiểm tra chính sách mạng ở nơi làm việc/trường học trước khi chạy Honeygain: về bản chất kỹ thuật, bạn đang cho phép bên thứ ba dùng IP của mình để truy cập internet, không chỉ đơn thuần "chia sẻ băng thông rảnh rỗi" theo nghĩa thông thường.
+
+*Nguồn tham khảo: trang giải thích kỹ thuật và blog chính thức của Honeygain về mô hình proxy dân dụng; báo cáo nghiên cứu bảo mật của Trend Micro về rủi ro của các ứng dụng proxyware.*
+
 ## Biểu đồ thu nhập minh hoạ theo số thiết bị
 
 <svg viewBox="0 0 640 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Biểu đồ ước tính thu nhập Honeygain theo số lượng thiết bị mỗi tháng">
@@ -74,8 +88,8 @@ Theo trang thanh toán chính thức của Honeygain:
 Lưu ý quan trọng: Honeygain hỗ trợ Windows, macOS, Linux (kể cả chạy qua Docker) và Android. **Không có app chính thức cho iOS** ở thời điểm viết bài. Trước khi chạy trên mạng cơ quan/trường học, hãy kiểm tra chính sách sử dụng mạng ở đó — một số nơi cấm phần mềm chia sẻ băng thông loại này.
 
 <figure>
-  <img src="/images/honeygain/extension-popup.png" width="916" height="1196" loading="lazy" alt="Popup extension Honeygain trên trình duyệt, hiển thị số dư, lượng dữ liệu đang chia sẻ trong ngày (email đã được làm mờ)" />
-  <figcaption>Extension Honeygain chạy trên trình duyệt — theo dõi nhanh số credit kiếm được mỗi ngày trên từng thiết bị (đã làm mờ email).</figcaption>
+  <img src="/images/honeygain/extension-popup.png" width="916" height="1196" loading="lazy" alt="Ứng dụng Honeygain native trên macOS, popup trên thanh menu hiển thị số dư và lượng dữ liệu đang chia sẻ trong ngày (email đã được làm mờ)" />
+  <figcaption>Ứng dụng Honeygain cài native trên macOS (không phải extension trình duyệt) — popup trên thanh menu để theo dõi nhanh số credit kiếm được mỗi ngày trên từng thiết bị (đã làm mờ email).</figcaption>
 </figure>
 
 ## Mức rút tối thiểu & cách rút tiền
@@ -89,7 +103,7 @@ Honeygain hiện có 2 hình thức thanh toán:
 
 **Các bước rút tiền qua PayPal (cách phổ biến nhất):**
 
-1. Mở app/extension Honeygain → vào mục **Payout**.
+1. Mở app Honeygain → vào mục **Payout**.
 2. Liên kết tài khoản PayPal của bạn (email PayPal).
 3. Khi số dư đạt tối thiểu 20.000 credits, nhấn **Request Payout**.
 4. Chờ Honeygain xử lý (thường vài ngày làm việc) — tiền sẽ về ví PayPal.
