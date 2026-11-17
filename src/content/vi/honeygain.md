@@ -26,6 +26,11 @@ Theo trang thanh toán chính thức của Honeygain:
 
 > Honeygain không công bố mức thu nhập ước tính chính thức trên trang chủ. Các số liệu thu nhập dưới đây là **ước tính tổng hợp từ cộng đồng người dùng** (review, diễn đàn), **không phải cam kết từ Honeygain** — thực tế có thể cao hơn hoặc thấp hơn tuỳ khu vực, nhà mạng, thời gian online.
 
+<figure>
+  <img src="/images/honeygain/dashboard-overview.webp" width="2000" height="929" loading="lazy" alt="Bảng điều khiển Honeygain thực tế: số dư credits, tiến độ rút tiền, biểu đồ thu nhập 30 ngày gần nhất" />
+  <figcaption>Dashboard Honeygain thực tế của tác giả — số dư hiện tại và biểu đồ thu nhập theo ngày.</figcaption>
+</figure>
+
 ## Biểu đồ thu nhập minh hoạ theo số thiết bị
 
 <svg viewBox="0 0 640 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Biểu đồ ước tính thu nhập Honeygain theo số lượng thiết bị mỗi tháng">
@@ -67,6 +72,11 @@ Theo trang thanh toán chính thức của Honeygain:
 
 Lưu ý quan trọng: Honeygain hỗ trợ Windows, macOS, Linux (kể cả chạy qua Docker) và Android. **Không có app chính thức cho iOS** ở thời điểm viết bài. Trước khi chạy trên mạng cơ quan/trường học, hãy kiểm tra chính sách sử dụng mạng ở đó — một số nơi cấm phần mềm chia sẻ băng thông loại này.
 
+<figure>
+  <img src="/images/honeygain/extension-popup.png" width="916" height="1196" loading="lazy" alt="Popup extension Honeygain trên trình duyệt, hiển thị số dư, lượng dữ liệu đang chia sẻ trong ngày (email đã được làm mờ)" />
+  <figcaption>Extension Honeygain chạy trên trình duyệt — theo dõi nhanh số credit kiếm được mỗi ngày trên từng thiết bị (đã làm mờ email).</figcaption>
+</figure>
+
 ## Mức rút tối thiểu & cách rút tiền
 
 Honeygain hiện có 2 hình thức thanh toán:
@@ -85,6 +95,25 @@ Honeygain hiện có 2 hình thức thanh toán:
 5. Theo FAQ của Honeygain, PayPal có thể thu một khoản phí giao dịch nhỏ phía PayPal; bản thân Honeygain không thu thêm phí.
 
 **Nếu muốn rút sớm hơn (dưới 20 USD):** liên kết thêm tài khoản JumpTask trong app, chuyển sang chế độ JumpTask Mode để rút từ mức 0.5 USD, nhận qua thẻ quà tặng/crypto/PayPal.
+
+<figure>
+  <img src="/images/honeygain/transaction-history.webp" width="2000" height="851" loading="lazy" alt="Lịch sử giao dịch Honeygain: các khoản credit kiếm được mỗi ngày từ gathering, loyalty bonus và Lucky Pot" />
+  <figcaption>Lịch sử giao dịch thực tế — credits được cộng dần mỗi ngày từ việc chia sẻ băng thông (mục "Gathering").</figcaption>
+</figure>
+
+<figure>
+  <img src="/images/honeygain/payout-email.png" width="750" height="1334" loading="lazy" alt="Email xác nhận rút tiền thành công từ Honeygain qua PayPal (tên người nhận đã được làm mờ)" />
+  <figcaption>Email xác nhận thanh toán thành công qua PayPal sau khi đạt mức rút tối thiểu (đã làm mờ tên người nhận).</figcaption>
+</figure>
+
+## Thành tựu & phần thưởng phụ
+
+Honeygain cũng có hệ thống **Achievements** (thành tựu) — hoàn thành các mốc nhỏ (mời bạn, chạy liên tục nhiều ngày...) để nhận thêm huy hiệu và credit thưởng. Đây chỉ là phần thưởng phụ, không đáng kể so với thu nhập chính từ chia sẻ băng thông.
+
+<figure>
+  <img src="/images/honeygain/achievements.webp" width="2000" height="828" loading="lazy" alt="Trang Achievements của Honeygain với các huy hiệu Rookie, Busy Bee, JumpTasker, Buzz Booster" />
+  <figcaption>Trang Achievements — các huy hiệu và thử thách nhỏ giúp kiếm thêm credit.</figcaption>
+</figure>
 
 ## Chương trình giới thiệu (referral)
 

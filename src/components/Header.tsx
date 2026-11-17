@@ -1,6 +1,7 @@
 import { A } from "@solidjs/router";
 import { useI18n } from "../i18n/context";
 import LanguageSwitch from "./LanguageSwitch";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const { locale, t } = useI18n();
@@ -27,6 +28,7 @@ export default function Header() {
           >
             {t("nav_github")}
           </a>
+          <ThemeToggle />
           <LanguageSwitch />
         </nav>
       </div>

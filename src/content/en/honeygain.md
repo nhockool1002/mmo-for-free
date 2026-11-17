@@ -26,6 +26,11 @@ According to Honeygain's own payout page:
 
 > Honeygain does not publish an official earnings estimate on its site. The figures below are **aggregated community estimates** (reviews, forums) — **not a promise from Honeygain** — and real results can be higher or lower depending on your region, ISP, and uptime.
 
+<figure>
+  <img src="/images/honeygain/dashboard-overview.webp" width="2000" height="929" loading="lazy" alt="Real Honeygain dashboard: credit balance, payout progress, and the last-30-days earnings chart" />
+  <figcaption>The author's real Honeygain dashboard — current balance and daily earnings chart.</figcaption>
+</figure>
+
 ## Illustrative earnings chart by device count
 
 <svg viewBox="0 0 640 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustrative Honeygain monthly earnings estimate by number of devices">
@@ -67,6 +72,11 @@ The key mechanic: Honeygain rewards **traffic volume plus IP/network diversity**
 
 Important: Honeygain supports Windows, macOS, Linux (including via Docker) and Android. **There is no official iOS app** as of this writing. Before running it on a work or school network, check that network's usage policy — some organizations prohibit this kind of bandwidth-sharing software.
 
+<figure>
+  <img src="/images/honeygain/extension-popup.png" width="916" height="1196" loading="lazy" alt="Honeygain browser extension popup showing balance and today's shared data (email blurred)" />
+  <figcaption>The Honeygain browser extension — a quick way to check daily credits per device (email blurred for privacy).</figcaption>
+</figure>
+
 ## Minimum payout & how to withdraw
 
 Honeygain currently offers two payout paths:
@@ -85,6 +95,25 @@ Honeygain currently offers two payout paths:
 5. Per Honeygain's FAQ, PayPal itself may charge a small transaction fee; Honeygain does not add any extra fee.
 
 **If you want to cash out below $20:** link a JumpTask account inside the app and switch to JumpTask Mode to withdraw from as little as $0.50, via gift card, crypto, or PayPal.
+
+<figure>
+  <img src="/images/honeygain/transaction-history.webp" width="2000" height="851" loading="lazy" alt="Honeygain transaction history: daily credits earned from gathering, loyalty bonus, and Lucky Pot" />
+  <figcaption>Real transaction history — credits accrue daily from bandwidth sharing ("Gathering").</figcaption>
+</figure>
+
+<figure>
+  <img src="/images/honeygain/payout-email.png" width="750" height="1334" loading="lazy" alt="Honeygain payout confirmation email via PayPal (recipient name blurred)" />
+  <figcaption>A successful PayPal payout confirmation after reaching the minimum threshold (recipient name blurred).</figcaption>
+</figure>
+
+## Achievements & bonus perks
+
+Honeygain also has an **Achievements** system — hitting small milestones (inviting friends, staying online for several days in a row...) unlocks badges and bonus credits. This is a minor side perk, not comparable to the main bandwidth-sharing earnings.
+
+<figure>
+  <img src="/images/honeygain/achievements.webp" width="2000" height="828" loading="lazy" alt="Honeygain's Achievements page with Rookie, Busy Bee, JumpTasker, and Buzz Booster badges" />
+  <figcaption>The Achievements page — small badges and challenges that add a bit of extra credit.</figcaption>
+</figure>
 
 ## The referral program
 

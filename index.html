@@ -16,6 +16,15 @@
       rel="stylesheet"
     />
     <title>MMO For Free — Kiếm tiền online miễn phí</title>
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("mmo-theme") === "dark") {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
