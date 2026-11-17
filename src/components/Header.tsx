@@ -2,6 +2,7 @@ import { A } from "@solidjs/router";
 import { useI18n } from "../i18n/context";
 import LanguageSwitch from "./LanguageSwitch";
 import ThemeToggle from "./ThemeToggle";
+import Logo from "./Logo";
 
 export default function Header() {
   const { locale, t } = useI18n();
@@ -13,9 +14,7 @@ export default function Header() {
           href={`/${locale()}`}
           class="flex min-w-0 shrink items-center gap-2 whitespace-nowrap font-display text-base font-semibold text-ink-900 no-underline sm:text-lg dark:text-white"
         >
-          <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 text-sm font-bold text-white shadow-elev-2">
-            M
-          </span>
+          <Logo class="h-8 w-8 shrink-0 rounded-xl shadow-elev-2" />
           <span class="truncate">{t("siteName")}</span>
         </A>
 
