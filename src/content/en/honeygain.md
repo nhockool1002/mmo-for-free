@@ -7,7 +7,8 @@
   "date": "2026-11-16",
   "tags": ["passive-income", "honeygain", "bandwidth-sharing", "beginner"],
   "accent": "cyan",
-  "cover": "network"
+  "cover": "network",
+  "thumbnail": "/images/honeygain/thumbnail.webp"
 }
 ---
 ## What is Honeygain?

@@ -41,17 +41,32 @@ export default function Article() {
             <div
               class={`relative mt-4 flex h-44 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br shadow-elev-2 sm:h-56 ${accentGradient[article.accent ?? "violet"]}`}
             >
-              <div class="absolute inset-0 opacity-15 mix-blend-overlay" aria-hidden="true">
-                <svg width="100%" height="100%">
-                  <defs>
-                    <pattern id={`hero-dots-${article.id}`} width="16" height="16" patternUnits="userSpaceOnUse">
-                      <circle cx="2" cy="2" r="1.5" fill="white" />
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill={`url(#hero-dots-${article.id})`} />
-                </svg>
-              </div>
-              <CoverIllustration cover={article.cover ?? "network"} class="h-28 w-28 opacity-95 sm:h-36 sm:w-36" />
+              <Show
+                when={article.thumbnail}
+                fallback={
+                  <>
+                    <div class="absolute inset-0 opacity-15 mix-blend-overlay" aria-hidden="true">
+                      <svg width="100%" height="100%">
+                        <defs>
+                          <pattern id={`hero-dots-${article.id}`} width="16" height="16" patternUnits="userSpaceOnUse">
+                            <circle cx="2" cy="2" r="1.5" fill="white" />
+                          </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill={`url(#hero-dots-${article.id})`} />
+                      </svg>
+                    </div>
+                    <CoverIllustration cover={article.cover ?? "network"} class="h-28 w-28 opacity-95 sm:h-36 sm:w-36" />
+                  </>
+                }
+              >
+                <img
+                  src={article.thumbnail}
+                  alt=""
+                  aria-hidden="true"
+                  class="absolute inset-0 h-full w-full object-cover object-top"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/5 to-transparent" aria-hidden="true" />
+              </Show>
             </div>
 
             <header class="mt-4">

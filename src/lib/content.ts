@@ -11,6 +11,8 @@ export interface ArticleFrontMatter {
   tags: string[];
   accent?: AccentKey;
   cover?: CoverKey;
+  /** Optional real screenshot/photo path (from /public) used instead of the generated cover icon. */
+  thumbnail?: string;
 }
 
 export type AccentKey = "violet" | "cyan" | "amber" | "rose" | "emerald";
@@ -63,6 +65,7 @@ function buildArticles(): Article[] {
       tags: meta.tags ?? [],
       accent: meta.accent ?? "violet",
       cover: meta.cover ?? "network",
+      thumbnail: meta.thumbnail,
       locale,
       html: marked.parse(body, { async: false }) as string,
       readingMinutes: wordCountToMinutes(body),

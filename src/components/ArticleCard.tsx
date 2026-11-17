@@ -1,3 +1,4 @@
+import { Show } from "solid-js";
 import { A } from "@solidjs/router";
 import type { Article } from "../lib/content";
 import { accentGradient, accentChipBg, accentText } from "../lib/accent";
@@ -16,20 +17,35 @@ export default function ArticleCard(props: { article: Article; index?: number })
       <div
         class={`relative flex h-36 items-end justify-between overflow-hidden bg-gradient-to-br p-4 ${accentGradient[props.article.accent ?? "violet"]}`}
       >
-        <div class="absolute inset-0 opacity-15 mix-blend-overlay" aria-hidden="true">
-          <svg width="100%" height="100%">
-            <defs>
-              <pattern id={`dots-${props.article.id}`} width="14" height="14" patternUnits="userSpaceOnUse">
-                <circle cx="2" cy="2" r="1.4" fill="white" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill={`url(#dots-${props.article.id})`} />
-          </svg>
-        </div>
-        <CoverIllustration
-          cover={props.article.cover ?? "network"}
-          class="absolute right-3 top-3 h-20 w-20 opacity-90 transition-transform duration-250 ease-out group-hover:scale-105 sm:h-24 sm:w-24"
-        />
+        <Show
+          when={props.article.thumbnail}
+          fallback={
+            <>
+              <div class="absolute inset-0 opacity-15 mix-blend-overlay" aria-hidden="true">
+                <svg width="100%" height="100%">
+                  <defs>
+                    <pattern id={`dots-${props.article.id}`} width="14" height="14" patternUnits="userSpaceOnUse">
+                      <circle cx="2" cy="2" r="1.4" fill="white" />
+                    </pattern>
+                  </defs>
+                  <rect width="100%" height="100%" fill={`url(#dots-${props.article.id})`} />
+                </svg>
+              </div>
+              <CoverIllustration
+                cover={props.article.cover ?? "network"}
+                class="absolute right-3 top-3 h-20 w-20 opacity-90 transition-transform duration-250 ease-out group-hover:scale-105 sm:h-24 sm:w-24"
+              />
+            </>
+          }
+        >
+          <img
+            src={props.article.thumbnail}
+            alt=""
+            aria-hidden="true"
+            class="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-250 ease-out group-hover:scale-105"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent" aria-hidden="true" />
+        </Show>
         <span class="relative rounded-full bg-black/20 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-sm">
           {t("reading_time", { n: props.article.readingMinutes })}
         </span>
