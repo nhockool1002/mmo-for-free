@@ -17,7 +17,7 @@ export const dict = {
     nav_github: "GitHub",
     hero_title: "Kiếm tiền online, bắt đầu từ kiến thức đúng.",
     hero_subtitle:
-      "Tổng hợp kinh nghiệm thực tế về MMO (Make Money Online): affiliate, freelance, content, airdrop... Không bán khoá học, không mời đầu tư, chỉ chia sẻ miễn phí.",
+      "Tổng hợp kinh nghiệm thực tế về MMO (Make Money Online), bắt đầu với thu nhập thụ động từ chia sẻ băng thông. Không bán khoá học, không mời đầu tư, chỉ chia sẻ miễn phí.",
     search_placeholder: "Tìm bài viết theo tên, chủ đề...",
     filter_all: "Tất cả",
     read_more: "Đọc tiếp",
@@ -43,7 +43,7 @@ export const dict = {
     nav_github: "GitHub",
     hero_title: "Make money online, starting with the right knowledge.",
     hero_subtitle:
-      "Practical write-ups on MMO (Make Money Online): affiliate, freelancing, content, airdrops and more. No paid courses, no investment pitches — just free knowledge.",
+      "Practical write-ups on MMO (Make Money Online), starting with passive income from sharing spare bandwidth. No paid courses, no investment pitches — just free knowledge.",
     search_placeholder: "Search articles by title, topic...",
     filter_all: "All",
     read_more: "Read more",
