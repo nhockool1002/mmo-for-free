@@ -31,3 +31,27 @@ export const accentChipBg: Record<AccentKey, string> = {
   rose: "bg-rose-100 dark:bg-rose-900/40",
   emerald: "bg-emerald-100 dark:bg-emerald-900/40",
 };
+
+/** Article prose: h2/h3 colored by the article's accent, with a matching left marker bar. */
+export const accentHeading: Record<AccentKey, string> = {
+  violet:
+    "[&_h2]:text-violet-700 [&_h2]:dark:text-violet-300 [&_h3]:text-violet-700 [&_h3]:dark:text-violet-300",
+  cyan: "[&_h2]:text-cyan-700 [&_h2]:dark:text-cyan-300 [&_h3]:text-cyan-700 [&_h3]:dark:text-cyan-300",
+  amber:
+    "[&_h2]:text-amber-700 [&_h2]:dark:text-amber-300 [&_h3]:text-amber-700 [&_h3]:dark:text-amber-300",
+  rose: "[&_h2]:text-rose-700 [&_h2]:dark:text-rose-300 [&_h3]:text-rose-700 [&_h3]:dark:text-rose-300",
+  emerald:
+    "[&_h2]:text-emerald-700 [&_h2]:dark:text-emerald-300 [&_h3]:text-emerald-700 [&_h3]:dark:text-emerald-300",
+};
+
+/** Article prose: hover highlight on <strong> text, colored by the article's accent. */
+export const accentStrongHover: Record<AccentKey, string> = {
+  violet:
+    "[&_strong:hover]:bg-violet-100 [&_strong:hover]:dark:bg-violet-900/40 [&_strong:hover]:text-violet-700 [&_strong:hover]:dark:text-violet-300",
+  cyan: "[&_strong:hover]:bg-cyan-100 [&_strong:hover]:dark:bg-cyan-900/40 [&_strong:hover]:text-cyan-700 [&_strong:hover]:dark:text-cyan-300",
+  amber:
+    "[&_strong:hover]:bg-amber-100 [&_strong:hover]:dark:bg-amber-900/40 [&_strong:hover]:text-amber-700 [&_strong:hover]:dark:text-amber-300",
+  rose: "[&_strong:hover]:bg-rose-100 [&_strong:hover]:dark:bg-rose-900/40 [&_strong:hover]:text-rose-700 [&_strong:hover]:dark:text-rose-300",
+  emerald:
+    "[&_strong:hover]:bg-emerald-100 [&_strong:hover]:dark:bg-emerald-900/40 [&_strong:hover]:text-emerald-700 [&_strong:hover]:dark:text-emerald-300",
+};

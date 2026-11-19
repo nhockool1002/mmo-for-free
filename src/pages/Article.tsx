@@ -2,7 +2,7 @@ import { For, Show, createMemo, createEffect } from "solid-js";
 import { A, useNavigate, useParams } from "@solidjs/router";
 import { useI18n } from "../i18n/context";
 import { getArticleBySlugWithFallback, getRelatedArticles } from "../lib/content";
-import { accentChipBg, accentGradient, accentText } from "../lib/accent";
+import { accentChipBg, accentGradient, accentText, accentHeading, accentStrongHover } from "../lib/accent";
 import ArticleCard from "../components/ArticleCard";
 import CoverIllustration from "../components/CoverIllustration";
 import NotFound from "./NotFound";
@@ -20,6 +20,7 @@ export default function Article() {
       {(res) => {
         const article = res.article;
         const related = getRelatedArticles(article);
+        const accent = article.accent ?? "violet";
 
         createEffect(() => {
           const path = `/${locale()}/bai-viet/${article.slug}`;
@@ -122,7 +123,7 @@ export default function Article() {
             </header>
 
             <div
-              class="prose-article mt-8 max-w-none text-[1.05rem] leading-7 text-ink-700 dark:text-ink-200 [&_h2]:mt-9 [&_h2]:mb-3 [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-ink-900 [&_h2]:dark:text-white [&_h3]:mt-6 [&_h3]:mb-2 [&_h3]:text-lg [&_h3]:font-semibold [&_p]:my-4 [&_ul]:my-4 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:my-4 [&_ol]:list-decimal [&_ol]:pl-6 [&_li]:my-1 [&_blockquote]:my-5 [&_blockquote]:border-l-4 [&_blockquote]:border-brand-300 [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-ink-500 [&_strong]:font-semibold [&_strong]:text-ink-900 [&_strong]:dark:text-white [&_table]:my-5 [&_table]:block [&_table]:w-full [&_table]:overflow-x-auto [&_table]:border-collapse [&_table]:text-sm [&_th]:border [&_th]:border-ink-200 [&_th]:bg-ink-100 [&_th]:px-3 [&_th]:py-2 [&_th]:text-left [&_th]:font-semibold [&_th]:dark:border-white/10 [&_th]:dark:bg-white/5 [&_td]:border [&_td]:border-ink-200 [&_td]:px-3 [&_td]:py-2 [&_td]:align-top [&_td]:dark:border-white/10 [&_svg]:my-2 [&_svg]:h-auto [&_svg]:max-w-full [&_figure]:my-6 [&_img]:w-full [&_img]:rounded-xl [&_img]:border [&_img]:border-ink-200 [&_img]:shadow-elev-2 [&_img]:dark:border-white/10 [&_figcaption]:mt-2 [&_figcaption]:text-center [&_figcaption]:text-sm [&_figcaption]:text-ink-500 [&_figcaption]:dark:text-ink-400"
+              class={`prose-article mt-8 max-w-none text-[1.05rem] leading-7 text-ink-700 dark:text-ink-200 [&_h2]:relative [&_h2]:mt-9 [&_h2]:mb-3 [&_h2]:pl-4 [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:before:absolute [&_h2]:before:left-0 [&_h2]:before:top-1.5 [&_h2]:before:bottom-1.5 [&_h2]:before:w-1 [&_h2]:before:rounded-full [&_h2]:before:bg-current [&_h2]:before:content-[''] [&_h3]:mt-6 [&_h3]:mb-2 [&_h3]:text-lg [&_h3]:font-semibold [&_p]:my-4 [&_ul]:my-4 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:my-4 [&_ol]:list-decimal [&_ol]:pl-6 [&_li]:my-1 [&_blockquote]:my-5 [&_blockquote]:border-l-4 [&_blockquote]:border-brand-300 [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-ink-500 [&_strong]:font-semibold [&_strong]:text-ink-900 [&_strong]:dark:text-white [&_strong]:rounded-sm [&_strong]:transition-colors [&_strong]:duration-200 [&_table]:my-5 [&_table]:block [&_table]:w-full [&_table]:overflow-x-auto [&_table]:border-collapse [&_table]:text-sm [&_th]:border [&_th]:border-ink-200 [&_th]:bg-ink-100 [&_th]:px-3 [&_th]:py-2 [&_th]:text-left [&_th]:font-semibold [&_th]:dark:border-white/10 [&_th]:dark:bg-white/5 [&_td]:border [&_td]:border-ink-200 [&_td]:px-3 [&_td]:py-2 [&_td]:align-top [&_td]:dark:border-white/10 [&_svg]:my-2 [&_svg]:h-auto [&_svg]:max-w-full [&_figure]:my-6 [&_img]:w-full [&_img]:rounded-xl [&_img]:border [&_img]:border-ink-200 [&_img]:shadow-elev-2 [&_img]:dark:border-white/10 [&_figcaption]:mt-2 [&_figcaption]:text-center [&_figcaption]:text-sm [&_figcaption]:text-ink-500 [&_figcaption]:dark:text-ink-400 ${accentHeading[accent]} ${accentStrongHover[accent]}`}
               innerHTML={article.html}
             />
 
